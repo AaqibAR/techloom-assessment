@@ -24,7 +24,8 @@ const PORT = process.env.PORT || 5001;
 
 connectDB()
   .then(() => {
-    app.listen(PORT, () => console.log(`Task-01 backend running on port ${PORT}`));
+    // Add '0.0.0.0' as the second argument here:
+    app.listen(PORT, '0.0.0.0', () => console.log(`Task-01 backend running on port ${PORT}`));
     startReservationExpiryJob();
   })
   .catch((err) => {
