@@ -11,7 +11,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.listen(PORT, '0.0.0.0', () => console.log(`Task-02 backend running on port ${PORT}`));
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
 app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
@@ -25,7 +24,7 @@ const PORT = process.env.PORT || 5002;
 
 connectDB()
   .then(() => {
-    app.listen(PORT, () => console.log(`Task-02 backend running on port ${PORT}`));
+    app.listen(PORT, '0.0.0.0', () => console.log(`Task-02 backend running on port ${PORT}`));
     startReservationExpiryJob();
   })
   .catch((err) => {
