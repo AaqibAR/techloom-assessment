@@ -11,6 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => res.json({ message: 'Techloom POS API running', health: '/health' }));
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
 app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
@@ -32,3 +33,4 @@ connectDB()
     console.error('Failed to connect to MongoDB:', err.message);
     process.exit(1);
   });
+
