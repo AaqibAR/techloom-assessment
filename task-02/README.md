@@ -3,8 +3,8 @@
 Node/Express/Mongoose backend + React (Vite) storefront. Shares the same concurrency-safe reservation core as Task 01, extended with product search/filtering, refunds, and per-user order history.
 
 ## Live URLs
-- Backend: TODO — fill in after Railway deploy
-- Frontend: TODO — fill in after Railway deploy
+- Backend: https://tltask2backend-production.up.railway.app
+- Frontend: https://tltask2frontend-production.up.railway.app
 
 ## Tech stack
 Node.js, Express, MongoDB (Atlas) via Mongoose, React 18 (Vite), plain CSS.
